@@ -16,3 +16,7 @@ Thumbs.db
 *.log
 scratch/
 output/
+
+# MyWorld Harness runtime evidence
+.myworld-harness/evidence/
+.myworld-harness/cache/
