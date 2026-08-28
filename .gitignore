@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+
+# Archivos temporales y del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+scratch/
+output/
