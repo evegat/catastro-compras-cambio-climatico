@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "product_id": "P089",
+  "name": "Catastro Compras Públicas y Cambio Climático",
+  "owner": "Eduardo Vega",
+  "myworld_project": "P089",
+  "kind": "research_code",
+  "lifecycle_stage": "maintenance",
+  "risk": "moderate",
+  "data_classification": ["public"],
+  "deployment": {"state": "unknown", "production_urls": []},
+  "repository": {"type": "git", "default_branch": "main", "remote_policy": "existing"},
+  "commands": {
+    "quality": ["python scripts/audit_dataset.py Catastro_Cambio_Climatico_ChileCompra.csv"],
+    "build": [],
+    "test": ["python -m unittest discover -s tests -v"]
+  },
+  "critical_paths": ["scripts", "tests", "Catastro_Cambio_Climatico_ChileCompra.csv", "HARNESS.md", "README.md"],
+  "forbidden_paths": [".env", "credentials", "_backups", "data/raw"],
+  "multi_agent": {"isolation": "worktree", "integration_owner": "Eduardo Vega"},
+  "observability": {"level": 1, "domains": ["technical", "pipeline"], "monitors": []},
+  "release": {"backup_required": false, "restore_test_required": false, "rollback_required": true, "rpo_hours": null, "rto_hours": null},
+  "evidence": {"last_audit": null, "pending_register": "MyWorld:harness/state/pending.ndjson"}
+}
